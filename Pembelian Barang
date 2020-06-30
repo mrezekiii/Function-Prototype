@@ -46,4 +46,77 @@ for(int i = 0; i < 40; i++)
 cout<<"=";
 cout<<endl;
 }
+#include<iostream>
+#include<iomanip>
+//LATIHAN SEBELUM UAS (Function Prototype) 30/06/2020 MUHAMMAD REZEKI 
+using namespace std;
 
+//prototipe fungsi garis()
+void pembelianBarang();
+void garis();
+int main(){	
+ 	pembelianBarang ();
+	garis();
+ 
+}
+void pembelianBarang(){
+	char namaBarang[100] , hargaBarang[100] , namaBarang1[100] , hargaBarang1[100];
+	char namaBarang2[100] , hargaBarang2[100];
+	double hargaBeli , totalBayar;	
+// \n sama dengan endl; untuk memberi enter
+	cout << "Pembelian Barang CV.Sumber Rezeki \n" ;
+	cout << "TRIAL VERSION \n";
+	cout << "Note: Hanya 3 barang yang dapat dimasukkan \n";
+	cout << "Harga tanpa titik \n";
+	cout <<endl;
+//**************************************
+	cout << "masukkan nama barang ke 1 : ";
+	cin.getline(namaBarang,100); 
+	cout << "masukkan harga barang ke 1  : ";
+	cin.getline(hargaBarang,100); 
+//**************************************
+	cout << "masukkan nama barang ke 2 : ";
+	cin.getline(namaBarang1,100); 
+	cout << "masukkan harga barang ke 2 : ";
+	cin.getline(hargaBarang1,100); 
+//**************************************
+	cout << "masukkan nama barang ke 3 : ";
+	cin.getline(namaBarang2,100); 
+	cout << "masukkan harga barang ke 3 : ";
+	cin.getline(hargaBarang2,100); 
+//menghapus tampilan sebelumnya dan menampilkan function setelahnya
+system ("cls");
+//memanggil fungsi garis ()
+	garis ();
+	cout << "Pembelian Barang CV.Sumber Rezeki \n" ;
+	cout << "TRIAL VERSION \n";
+	cout << "Note: Hanya 3 barang yang dapat dimasukkan \n";
+	garis(); 
+//cout<<setiosflags(ios::left); membuat rata kiri seluruh tulisan
+	cout << setiosflags(ios::left); 
+//setw() memberikan ruang untuk karakter/nilai
+	cout << setw(15) <<"Nama Barang" <<setw(15)<<"Harga"<<endl;
+//memanggil fungsi garis ()
+	garis(); 
+	cout << setw(15) << namaBarang << setw(15) << hargaBarang <<endl;
+	cout << setw(15) << namaBarang1 << setw(15) << hargaBarang1 <<endl;
+	cout << setw(15) << namaBarang2 << setw(15) << hargaBarang2 <<endl;
+//memanggil fungsi garis ()
+	garis(); 
+	cout << "Note: Masukkan tanpa tanda titik \n";
+	cout << "Massukkan total jumlah harga barang : ";
+	cin >> hargaBeli;
+	cout << "Masukkan total pembayaran barang : ";
+	cin >> totalBayar;
+	
+	cout << "Total kembalian yang Anda terima : " << (totalBayar - hargaBeli)	;
+	
+	cout << endl;
+}
+
+void garis(){  
+//fungsi garis ()
+for(int i = 0; i < 40; i++)
+cout<<"=";
+cout<<endl;
+}
